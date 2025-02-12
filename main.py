@@ -37,11 +37,17 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--port", type=int, default=8000)
+    parser.add_argument("--test", action="store_true", help="Run unit tests")
     args = parser.parse_args()
 
-    uvicorn.run(
-        "main:app",
-        host="0.0.0.0",
-        port=args.port,
-        reload=True,
-    )
+    # Run tests if --test flag is provided
+    if args.test:
+        # TO DO Run tests
+        pass
+    else:
+        uvicorn.run(
+            "main:app",
+            host="0.0.0.0",
+            port=args.port,
+            reload=True,
+        )
