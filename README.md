@@ -72,7 +72,7 @@ This FastAPI web app uses the OpenAI API to analyze code. It offers features lik
 
 ### REST API
 
-- **POST /api/code/analyze**: Analyze code by providing a JSON payload:
+- **POST /api/code/analyze**: Analyze code by providing a JSON payload (currently non-streaming):
 
   ```json
   {
@@ -99,6 +99,7 @@ This FastAPI web app uses the OpenAI API to analyze code. It offers features lik
 ## Future Improvements
 
 - **Performance Enhancements:**
+  - Implement streaming API responses for real-time analysis feedback.
   - Implement history for LLM context.
   - Add request rate limiting and response validation.
 - **Feature Enhancements:**
